@@ -1,0 +1,77 @@
+/* Large screen */
+@media (min-width: 768px) {
+  /* Nav Hover */
+  .hover li a:before,
+  .hover li a:after {
+    content: "";
+    height: 1.5px;
+    width: 0;
+    opacity: 0;
+    background-color: #fff;
+    position: absolute;
+    transition: all 0.5s ease-in-out; }
+
+  .hover li a:before {
+    top: -3px; }
+
+  .hover li a:after {
+    bottom: -3px;
+    right: 0; }
+
+  .hover li a:hover:before,
+  .hover li a:hover:after {
+    width: calc(100% + 10px);
+    opacity: 1; } }
+/* Medium screen */
+@media (min-width: 768px) and (max-width: 991px) {
+  #p-page header .job-title {
+    left: 15%;
+    right: 15%; } }
+/* small screen */
+/* Smart phones and tablet */
+@media (max-width: 767px) {
+  /* Navbar */
+  #p-page .navbar-collapse {
+    background: #555;
+    text-align: center; }
+
+  .navbar-default .navbar-toggle {
+    border-color: #fff; }
+
+  .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background: transparent; }
+
+  .navbar-default .navbar-toggle .icon-bar, .navbar-default .navbar-toggle .icon-bar:hover, .navbar-default .navbar-toggle .icon-bar:active {
+    background: #fff; }
+
+  .navbar-toggle {
+    margin-top: 15px; }
+
+  .hover li a:before, .hover li a:after {
+    border: none; }
+
+  .hover li a:hover, .hover li a:active, .hover li a:focus {
+    font-weight: bold;
+    transition: all 0.5s ease-in-out; }
+
+  /* header */
+  #about, #Portfolio {
+    padding-top: 15% !important; }
+
+  #p-page header .job-title {
+    left: 5%;
+    right: 5%; }
+
+  #p-page #about p {
+    padding: 0px 5%; }
+
+  /* portfolio */
+  figure {
+    width: 50% !important;
+    padding: 20px; } }
+@media screen and (max-width: 340px) {
+  figcaption .btn {
+    padding: 5px !important;
+    width: 120px !important; } }
+
+/*# sourceMappingURL=responsive.css.map */

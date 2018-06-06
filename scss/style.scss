@@ -1,0 +1,191 @@
+$white: #fff;
+$black: #2c2c2c;
+$main:  #555;
+$animate: all .5s ease-in-out;
+$slow:  all 1s ease-in-out;
+
+html {
+  line-height: 1.15; 
+  -webkit-text-size-adjust: 100%; 
+  body {
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      background: $white;      
+      margin: 0;
+      font-family: 'Titillium Web', sans-serif; 
+      font-size: 16px;
+  h1 {
+      font-size: 2em;
+      margin: 0.67em 0;
+    }   
+  }
+  a, a:hover, a:active, a:fo{
+        transition: $slow;
+        text-decoration: none;
+    }
+}
+#p-page {
+    /* Navbar */
+    nav{
+        background: $main;
+        height: 65px;
+        border: none;
+        box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
+        img {
+            width: 120px;
+        }
+        li {
+            font-size: 1.2em;
+            a {
+                color: $white;
+                padding: 2px;
+                margin: 20px;
+                transition: $animate;
+            }
+            a:hover, a:active, a:focus{
+                color: $white;
+            }
+        }
+    }
+    /* Navbar collapse */
+    .navbar-collapse {
+        border: none;
+    }
+    /* Header */
+    header {
+        background: url(../img/hero.jpeg);
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+        .job-title {
+            position: absolute;
+            background: $black;
+            color: $white;
+            top: 35vh;
+            padding: 40px;
+            text-align: center;
+            left: 30%;
+            right: 30%;
+            border-radius: 5px;
+            opacity: 0.8;
+        }
+        .job-title:before,  .job-title:after {
+            content: "";
+            height: 2.5px;
+            opacity: 0.8;
+            background-color: $black;
+            position: absolute;
+            width: calc(100% - 45%);
+        }
+        .job-title:after {
+            bottom: -15px;
+            right: 0;
+        }
+        .job-title:before {
+            top: -15px;
+            left: 0;
+        }
+    }
+    /* About */
+    #about {
+        position: relative;
+        padding: 5% 0;
+        background: $main;
+        color: $white;
+        h1 { 
+            font-weight: bold;
+                }
+        p {
+            padding: 0 17%;
+            font-size: 1.3em;
+        }
+    }
+    /* Portfolio */
+    #Portfolio{
+        padding: 5% 0;
+    }
+    h1{
+        font-weight: bold;
+    }
+    #all-pro {
+        display: flex;
+        flex-wrap: wrap;
+        figure {
+            width: 25%;
+            padding: 20px;
+        }
+        figure img {
+            transition: $slow;
+            width: 100%;
+        }
+        figure img:hover {
+            transform: scale(.90);
+            cursor: pointer; 
+            box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
+            width: 100%;
+        }
+        figcaption .btn {
+            padding: 10px 30px;
+            background: $black;
+            color: $white;
+            width: 150px;
+            margin-top: 30px;
+            transition: $slow;
+            border-radius: 20px;
+        }
+        figcaption .btn:hover {
+            background: $main;
+            border-radius: 0;
+        }
+    }
+    /* contact */
+    #contact{
+        background: $main;
+        padding-top: 5%;
+        color: $white;
+        p {
+            font-size: 1.2em;
+            padding-bottom: 5%;
+        }
+        span {
+            font-weight: bold;
+        }
+    }
+    .social {
+        display: flex;
+        flex-wrap: wrap;
+        .li, .fb, .git{
+            width: 33.333%;
+            padding: 20px;
+            margin-bottom: -1px;
+            color: $white;
+            transition: $slow;
+        }
+        .li {
+            background: #0077b5;
+        }
+        .fb {
+            background: #3B5998;
+        }
+        .git {
+            background: #24292e;
+        }
+        a:hover {
+            background-color: black;
+            text-decoration: none; 
+            
+        }
+    }
+    /* footer */
+    footer {
+        text-align: center;
+        background: $white;
+        color: $black;
+        padding: 10px;
+        p {
+            margin: 0;
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+$white: #fff;
+$black: #2c2c2c;
+$main: #555;
+$animate: all .5s ease-in-out;
+
+/* Large screen */
+@media (min-width: 768px) {
+/* Nav Hover */
+    .hover li a:before,
+    .hover li a:after {
+            content: "";
+            height: 1.5px;
+            width: 0;
+            opacity: 0;
+            background-color: $white;
+            position: absolute;
+            transition: $animate;
+        }
+    .hover li a:before {
+            top: -3px;
+        }
+    .hover li a:after {
+            bottom: -3px;
+            right: 0;
+        }
+    .hover li a:hover:before,
+    .hover li a:hover:after {
+             width: calc(100% + 10px);
+             opacity: 1;
+        }
+}
+
+/* Medium screen */
+@media (min-width: 768px) AND (max-width: 991px) {
+    #p-page header .job-title {
+    left: 15%;
+    right: 15%;
+}
+}
+
+/* small screen */
+@media (max-width: 991px) {
+  
+
+}
+
+/* Smart phones and tablet */
+@media (max-width: 767px) {
+    /* Navbar */
+    #p-page .navbar-collapse {
+        background: $main;
+        text-align: center;
+    }
+    .navbar-default .navbar-toggle {
+         border-color: $white;
+    }
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+        background: transparent;
+    }
+    .navbar-default .navbar-toggle .icon-bar, .navbar-default .navbar-toggle .icon-bar:hover, .navbar-default .navbar-toggle .icon-bar:active {
+       background: $white;
+    }  
+    .navbar-toggle {
+        margin-top: 15px;
+    }
+    .hover li a:before, .hover li a:after {
+        border: none;
+    }
+    .hover li a:hover,.hover li a:active, .hover li a:focus {
+        font-weight: bold;
+        transition: $animate;
+    }
+    /* header */
+     #about, #Portfolio {
+        padding-top: 15%!important;
+    }
+    #p-page header .job-title {
+            left: 5%;
+            right: 5%;
+    }
+    #p-page #about p {
+    padding: 0px 5%;
+    }
+    /* portfolio */
+    figure {
+        width: 50%!important;
+        padding: 20px;
+        }  
+}
+@media screen and (max-width: 340px) {
+    figcaption .btn {
+            padding: 5px!important;
+            width: 120px!important;
+    }
+}
